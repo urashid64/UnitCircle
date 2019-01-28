@@ -12,6 +12,7 @@
 		9F7208E021FFAE06000505E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7208DE21FFAE06000505E9 /* Main.storyboard */; };
 		9F7208E221FFAE0A000505E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F7208E121FFAE0A000505E9 /* Assets.xcassets */; };
 		9F7208E521FFAE0A000505E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7208E321FFAE0A000505E9 /* LaunchScreen.storyboard */; };
+		9F7208ED21FFB165000505E9 /* UIQuartzView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7208EC21FFB165000505E9 /* UIQuartzView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9F7208E121FFAE0A000505E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F7208E421FFAE0A000505E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F7208E621FFAE0A000505E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F7208EC21FFB165000505E9 /* UIQuartzView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIQuartzView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				9F7208DA21FFAE06000505E9 /* AppDelegate.swift */,
 				9F7208DC21FFAE06000505E9 /* ViewController.swift */,
+				9F7208EC21FFB165000505E9 /* UIQuartzView.swift */,
 				9F7208DE21FFAE06000505E9 /* Main.storyboard */,
 				9F7208E121FFAE0A000505E9 /* Assets.xcassets */,
 				9F7208E321FFAE0A000505E9 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F7208ED21FFB165000505E9 /* UIQuartzView.swift in Sources */,
 				9F7208DD21FFAE06000505E9 /* ViewController.swift in Sources */,
 				9F7208DB21FFAE06000505E9 /* AppDelegate.swift in Sources */,
 			);
@@ -292,7 +296,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-.UnitCircle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +314,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "-.UnitCircle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
