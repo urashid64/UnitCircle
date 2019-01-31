@@ -25,6 +25,11 @@
                                     <constraint firstAttribute="width" secondItem="LvH-zi-SHf" secondAttribute="height" multiplier="1:1" id="35l-Tx-jiH"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9qV-zy-wRN" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
+                                <rect key="frame" x="151" y="501" width="72" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -35,6 +40,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="fracView" destination="9qV-zy-wRN" id="ITf-J4-X83"/>
                         <outlet property="qView" destination="LvH-zi-SHf" id="CDk-yn-ked"/>
                     </connections>
                 </viewController>

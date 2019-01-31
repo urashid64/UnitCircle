@@ -32,14 +32,14 @@ class UIQuartzView: UIView {
         case pi_by_three
     }
     
-    let axisAngle : [axis:Float] = [
+    let axisAngle: [axis : Float] = [
         .plus_x:     0.0,
         .plus_y:    .pi/2,
         .minus_x:   .pi,
         .minus_y:   .pi/2 * 3
     ]
 
-    let stepAngle : [step:Float] = [
+    let stepAngle: [step : Float] = [
         .pi_by_six:     .pi/6,
         .pi_by_four:    .pi/4,
         .pi_by_three:   .pi/3

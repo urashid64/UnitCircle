@@ -11,10 +11,13 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var qView: UIQuartzView!
+    @IBOutlet weak var fracView: UIFractionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        fracView.setFraction(top: "2𝜋", bottom: "3")
     }
 }
 
