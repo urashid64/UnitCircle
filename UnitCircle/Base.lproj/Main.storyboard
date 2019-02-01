@@ -25,23 +25,89 @@
                                     <constraint firstAttribute="width" secondItem="LvH-zi-SHf" secondAttribute="height" multiplier="1:1" id="35l-Tx-jiH"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9qV-zy-wRN" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
-                                <rect key="frame" x="151" y="501" width="72" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qV-zy-wRN" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
+                                <rect key="frame" x="96" y="487" width="70" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Rcf-R0-sve"/>
+                                    <constraint firstAttribute="width" constant="70" id="hDM-Ov-J1Y"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="im6-FC-sCJ" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
+                                <rect key="frame" x="96" y="429" width="70" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="G5u-Gr-RlO"/>
+                                    <constraint firstAttribute="width" constant="70" id="geN-Yy-E2W"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOe-HS-qYh" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
+                                <rect key="frame" x="289" y="487" width="70" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="8FN-W0-lPb"/>
+                                    <constraint firstAttribute="height" constant="50" id="AYZ-dZ-9m9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8T-0Q-50z" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
+                                <rect key="frame" x="289" y="371" width="70" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="Moc-lk-RbQ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="hTM-Ns-xei"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="q1B-wz-rHJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="r8Z-yo-PNf"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pps-9w-csS" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
+                                <rect key="frame" x="289" y="429" width="70" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="mIn-YW-T8I"/>
+                                    <constraint firstAttribute="height" constant="50" id="qtz-2f-3ZS"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Bb-Vb-5WQ" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
+                                <rect key="frame" x="96" y="371" width="70" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="9Xw-IY-Fxu"/>
+                                    <constraint firstAttribute="height" constant="50" id="D3O-v8-NrE"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="9qV-zy-wRN" firstAttribute="trailing" secondItem="3Bb-Vb-5WQ" secondAttribute="trailing" id="4wx-bf-oyX"/>
+                            <constraint firstItem="im6-FC-sCJ" firstAttribute="top" secondItem="3Bb-Vb-5WQ" secondAttribute="bottom" constant="8" id="8FJ-TA-Toz"/>
+                            <constraint firstItem="pps-9w-csS" firstAttribute="trailing" secondItem="G8T-0Q-50z" secondAttribute="trailing" id="DnM-SQ-FsM"/>
+                            <constraint firstItem="SOe-HS-qYh" firstAttribute="trailing" secondItem="G8T-0Q-50z" secondAttribute="trailing" id="MDt-If-05Z"/>
+                            <constraint firstItem="G8T-0Q-50z" firstAttribute="leading" secondItem="3Bb-Vb-5WQ" secondAttribute="trailing" constant="123" id="MFc-Pd-xWw"/>
+                            <constraint firstItem="pps-9w-csS" firstAttribute="top" secondItem="G8T-0Q-50z" secondAttribute="bottom" constant="8" id="Or9-xM-JUd"/>
                             <constraint firstItem="LvH-zi-SHf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="T9I-tT-dL3"/>
+                            <constraint firstItem="G8T-0Q-50z" firstAttribute="bottom" secondItem="3Bb-Vb-5WQ" secondAttribute="bottom" id="WJR-5K-Gpr"/>
+                            <constraint firstItem="im6-FC-sCJ" firstAttribute="trailing" secondItem="3Bb-Vb-5WQ" secondAttribute="trailing" id="XkH-Cb-2rn"/>
+                            <constraint firstItem="G8T-0Q-50z" firstAttribute="top" secondItem="LvH-zi-SHf" secondAttribute="bottom" constant="8" id="Xs8-cs-O0U"/>
+                            <constraint firstItem="SOe-HS-qYh" firstAttribute="top" secondItem="pps-9w-csS" secondAttribute="bottom" constant="8" id="ZZ7-48-1oE"/>
+                            <constraint firstItem="3Bb-Vb-5WQ" firstAttribute="top" secondItem="LvH-zi-SHf" secondAttribute="bottom" constant="8" id="bb0-6e-0hv"/>
                             <constraint firstItem="LvH-zi-SHf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="goV-vD-VtQ"/>
+                            <constraint firstItem="SOe-HS-qYh" firstAttribute="bottom" secondItem="9qV-zy-wRN" secondAttribute="bottom" id="h2M-Lw-9xT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G8T-0Q-50z" secondAttribute="trailing" constant="16" id="hs1-03-lhZ"/>
+                            <constraint firstItem="9qV-zy-wRN" firstAttribute="top" secondItem="im6-FC-sCJ" secondAttribute="bottom" constant="8" id="mtR-06-Quv"/>
+                            <constraint firstItem="G8T-0Q-50z" firstAttribute="top" secondItem="LvH-zi-SHf" secondAttribute="bottom" constant="8" id="pT5-E0-aOR"/>
                             <constraint firstItem="LvH-zi-SHf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yBc-Ka-IHA"/>
+                            <constraint firstItem="pps-9w-csS" firstAttribute="bottom" secondItem="im6-FC-sCJ" secondAttribute="bottom" id="zhC-JA-Qgn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="fracView" destination="9qV-zy-wRN" id="ITf-J4-X83"/>
                         <outlet property="qView" destination="LvH-zi-SHf" id="CDk-yn-ked"/>
+                        <outlet property="valCos" destination="im6-FC-sCJ" id="koY-ZW-CY9"/>
+                        <outlet property="valCosec" destination="G8T-0Q-50z" id="tnZ-jB-Pdx"/>
+                        <outlet property="valCot" destination="SOe-HS-qYh" id="N4F-Xq-H1C"/>
+                        <outlet property="valSec" destination="pps-9w-csS" id="DkW-3j-tPX"/>
+                        <outlet property="valSin" destination="3Bb-Vb-5WQ" id="EEB-py-2Q0"/>
+                        <outlet property="valTan" destination="9qV-zy-wRN" id="NAy-BK-X1G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
