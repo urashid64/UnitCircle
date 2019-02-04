@@ -19,6 +19,7 @@ class UIQuartzView: UIView {
     // Each grid segment represents 0.2 units
     let gridSegments = 12
 
+    // Base axis for each quadrant
     enum axis {
         case plus_x
         case plus_y
@@ -26,12 +27,7 @@ class UIQuartzView: UIView {
         case minus_y
     }
 
-    enum step {
-        case pi_by_six
-        case pi_by_four
-        case pi_by_three
-    }
-    
+    // Angle for each base axis (in radians)
     let axisAngle: [axis : Float] = [
         .plus_x:     0.0,
         .plus_y:    .pi/2,
@@ -39,6 +35,14 @@ class UIQuartzView: UIView {
         .minus_y:   .pi/2 * 3
     ]
 
+    // Offsets of interest from the base axis
+    enum step {
+        case pi_by_six
+        case pi_by_four
+        case pi_by_three
+    }
+    
+    // Angle for each offset (in radians)
     let stepAngle: [step : Float] = [
         .pi_by_six:     .pi/6,
         .pi_by_four:    .pi/4,
@@ -50,9 +54,12 @@ class UIQuartzView: UIView {
     override func draw(_ rect: CGRect) {
 
         let context: CGContext = UIGraphicsGetCurrentContext()!
-//        context.setFillColor(red:0.0, green:0.0, blue:0.0, alpha:1.0);
         
+        // Extents of the drawing area
         drawBorder(context)
+        
+        // Components in the drawing ares
+        // Includes the Grid, the unit circle, and X-Y axis
         drawGrid(context)
     }
     
@@ -150,7 +157,6 @@ class UIQuartzView: UIView {
         // Draw line
         context.move(to: center)
         context.addLine(to: endPt)
-        
         context.strokePath()
     }
 }
