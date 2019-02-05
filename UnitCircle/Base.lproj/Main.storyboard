@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,104 +15,248 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UnitCircle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LvH-zi-SHf" customClass="UIQuartzView" customModule="UnitCircle" customModuleProvider="target">
-                                <rect key="frame" x="16" y="20" width="343" height="343"/>
+                                <rect key="frame" x="16" y="44" width="343" height="343"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LvH-zi-SHf" secondAttribute="height" multiplier="1:1" id="35l-Tx-jiH"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qV-zy-wRN" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
-                                <rect key="frame" x="96" y="487" width="70" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoB-c5-du8">
+                                <rect key="frame" x="16" y="403" width="95" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sin =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icf-50-Pso">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Yyl-2t-e6V"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="yu2-7Z-Hr1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SP2-W5-z9y" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="0.0" width="45" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="XqW-So-gCi"/>
+                                            <constraint firstAttribute="height" constant="50" id="rxb-NU-prG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Rcf-R0-sve"/>
-                                    <constraint firstAttribute="width" constant="70" id="hDM-Ov-J1Y"/>
+                                    <constraint firstItem="Icf-50-Pso" firstAttribute="leading" secondItem="XoB-c5-du8" secondAttribute="leading" id="0X2-ih-mF4"/>
+                                    <constraint firstItem="SP2-W5-z9y" firstAttribute="top" secondItem="XoB-c5-du8" secondAttribute="top" id="PJK-FO-LbW"/>
+                                    <constraint firstAttribute="trailing" secondItem="SP2-W5-z9y" secondAttribute="trailing" id="cRq-ga-HSK"/>
+                                    <constraint firstAttribute="height" constant="50" id="dI6-zH-WZe"/>
+                                    <constraint firstItem="SP2-W5-z9y" firstAttribute="leading" secondItem="Icf-50-Pso" secondAttribute="trailing" id="k43-Cj-DCR"/>
+                                    <constraint firstAttribute="width" constant="95" id="u2R-e0-5gl"/>
+                                    <constraint firstItem="Icf-50-Pso" firstAttribute="top" secondItem="XoB-c5-du8" secondAttribute="top" id="vKm-pn-pp8"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="im6-FC-sCJ" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
-                                <rect key="frame" x="96" y="429" width="70" height="50"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abp-SX-4Ho">
+                                <rect key="frame" x="140" y="403" width="95" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cos =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqA-FF-iDV">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="BaJ-09-uiM"/>
+                                            <constraint firstAttribute="height" constant="50" id="V2p-Jq-ON6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kav-tU-hOR" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="0.0" width="45" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="WSG-bG-MyK"/>
+                                            <constraint firstAttribute="height" constant="50" id="Yse-Ik-4aL"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="G5u-Gr-RlO"/>
-                                    <constraint firstAttribute="width" constant="70" id="geN-Yy-E2W"/>
+                                    <constraint firstAttribute="height" constant="50" id="6gm-uk-5Q2"/>
+                                    <constraint firstItem="kav-tU-hOR" firstAttribute="top" secondItem="abp-SX-4Ho" secondAttribute="top" id="EDt-Wl-4cD"/>
+                                    <constraint firstItem="RqA-FF-iDV" firstAttribute="leading" secondItem="abp-SX-4Ho" secondAttribute="leading" id="JK3-dD-8Nc"/>
+                                    <constraint firstAttribute="trailing" secondItem="kav-tU-hOR" secondAttribute="trailing" id="SXO-Mv-Xg2"/>
+                                    <constraint firstItem="RqA-FF-iDV" firstAttribute="top" secondItem="abp-SX-4Ho" secondAttribute="top" id="bEl-wn-dgb"/>
+                                    <constraint firstItem="kav-tU-hOR" firstAttribute="leading" secondItem="RqA-FF-iDV" secondAttribute="trailing" id="inO-eh-BKC"/>
+                                    <constraint firstAttribute="width" constant="95" id="pxK-aO-85C"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SOe-HS-qYh" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
-                                <rect key="frame" x="289" y="487" width="70" height="50"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jc9-ou-W4W">
+                                <rect key="frame" x="264" y="403" width="95" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tan =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urz-XQ-eJl">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="S5N-Oc-9Ja"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="lef-uD-Dai"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Quj-Ix-sG1" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="0.0" width="45" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="SJU-24-s4t"/>
+                                            <constraint firstAttribute="width" constant="45" id="ga5-l3-ulx"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="8FN-W0-lPb"/>
-                                    <constraint firstAttribute="height" constant="50" id="AYZ-dZ-9m9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Quj-Ix-sG1" secondAttribute="trailing" id="2Hp-Uz-I0e"/>
+                                    <constraint firstItem="urz-XQ-eJl" firstAttribute="leading" secondItem="jc9-ou-W4W" secondAttribute="leading" id="OB9-5p-KB1"/>
+                                    <constraint firstItem="urz-XQ-eJl" firstAttribute="top" secondItem="jc9-ou-W4W" secondAttribute="top" id="ZGj-Cs-BK1"/>
+                                    <constraint firstAttribute="width" constant="95" id="k6E-sM-sWh"/>
+                                    <constraint firstItem="Quj-Ix-sG1" firstAttribute="leading" secondItem="urz-XQ-eJl" secondAttribute="trailing" id="nYN-Uy-GLf"/>
+                                    <constraint firstAttribute="height" constant="50" id="oL2-zP-sgh"/>
+                                    <constraint firstItem="Quj-Ix-sG1" firstAttribute="top" secondItem="jc9-ou-W4W" secondAttribute="top" id="szE-Tp-N6L"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8T-0Q-50z" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
-                                <rect key="frame" x="289" y="371" width="70" height="50"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K23-XQ-MS8">
+                                <rect key="frame" x="16" y="461" width="95" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sec =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41O-nG-Czk">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="r1v-Xc-TcG"/>
+                                            <constraint firstAttribute="height" constant="50" id="wlW-Jj-i7E"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-8D-E1O" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="0.0" width="45" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="WzU-Jj-ewO"/>
+                                            <constraint firstAttribute="width" constant="45" id="lzg-5G-cp0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="Moc-lk-RbQ"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="hTM-Ns-xei"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="q1B-wz-rHJ"/>
-                                    <constraint firstAttribute="height" constant="50" id="r8Z-yo-PNf"/>
+                                    <constraint firstItem="ovd-8D-E1O" firstAttribute="leading" secondItem="41O-nG-Czk" secondAttribute="trailing" id="4jD-2B-CJp"/>
+                                    <constraint firstAttribute="height" constant="50" id="ESU-pw-ytf"/>
+                                    <constraint firstItem="ovd-8D-E1O" firstAttribute="top" secondItem="K23-XQ-MS8" secondAttribute="top" id="TyQ-vU-55A"/>
+                                    <constraint firstAttribute="width" constant="95" id="VdT-fe-jAC"/>
+                                    <constraint firstAttribute="trailing" secondItem="ovd-8D-E1O" secondAttribute="trailing" id="hhu-IL-QEb"/>
+                                    <constraint firstItem="41O-nG-Czk" firstAttribute="leading" secondItem="K23-XQ-MS8" secondAttribute="leading" id="pwR-Yv-umb"/>
+                                    <constraint firstItem="41O-nG-Czk" firstAttribute="top" secondItem="K23-XQ-MS8" secondAttribute="top" id="uaM-RL-QRZ"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pps-9w-csS" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
-                                <rect key="frame" x="289" y="429" width="70" height="50"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g08-Zr-Tru">
+                                <rect key="frame" x="140" y="461" width="95" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Csc =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufx-6l-SXF">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="6ea-Xj-SYj"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="aj6-fn-07o"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpM-Ph-1qB" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="0.0" width="45" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Fh7-0d-DWN"/>
+                                            <constraint firstAttribute="width" constant="45" id="NRj-6A-oHN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="mIn-YW-T8I"/>
-                                    <constraint firstAttribute="height" constant="50" id="qtz-2f-3ZS"/>
+                                    <constraint firstItem="ufx-6l-SXF" firstAttribute="leading" secondItem="g08-Zr-Tru" secondAttribute="leading" id="1WY-pK-JMb"/>
+                                    <constraint firstAttribute="height" constant="50" id="Hcq-O6-lLI"/>
+                                    <constraint firstAttribute="trailing" secondItem="gpM-Ph-1qB" secondAttribute="trailing" id="Nq5-Vp-8fg"/>
+                                    <constraint firstItem="gpM-Ph-1qB" firstAttribute="leading" secondItem="ufx-6l-SXF" secondAttribute="trailing" id="W9x-Bj-gXg"/>
+                                    <constraint firstAttribute="width" constant="95" id="Y0A-eO-Tah"/>
+                                    <constraint firstItem="ufx-6l-SXF" firstAttribute="top" secondItem="g08-Zr-Tru" secondAttribute="top" id="ZaK-iM-FLY"/>
+                                    <constraint firstItem="gpM-Ph-1qB" firstAttribute="top" secondItem="g08-Zr-Tru" secondAttribute="top" id="w9Q-Do-zp5"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Bb-Vb-5WQ" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
-                                <rect key="frame" x="96" y="371" width="70" height="50"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6uX-dI-9qX">
+                                <rect key="frame" x="264" y="461" width="95" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cot =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWR-eC-a7y">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Gf6-iI-lTs"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="d2M-L9-vtP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOD-31-Zv7" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="0.0" width="45" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9ce-tA-kGB"/>
+                                            <constraint firstAttribute="width" constant="45" id="TSy-db-eBa"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="9Xw-IY-Fxu"/>
-                                    <constraint firstAttribute="height" constant="50" id="D3O-v8-NrE"/>
+                                    <constraint firstAttribute="width" constant="95" id="1NK-VX-t7l"/>
+                                    <constraint firstItem="ZOD-31-Zv7" firstAttribute="leading" secondItem="QWR-eC-a7y" secondAttribute="trailing" id="1xh-Fr-LzL"/>
+                                    <constraint firstItem="QWR-eC-a7y" firstAttribute="leading" secondItem="6uX-dI-9qX" secondAttribute="leading" id="EFi-SJ-Yg1"/>
+                                    <constraint firstAttribute="height" constant="50" id="G0J-z4-hSE"/>
+                                    <constraint firstItem="QWR-eC-a7y" firstAttribute="top" secondItem="6uX-dI-9qX" secondAttribute="top" id="jQr-lx-Kaq"/>
+                                    <constraint firstItem="ZOD-31-Zv7" firstAttribute="top" secondItem="6uX-dI-9qX" secondAttribute="top" id="lbt-dd-V82"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZOD-31-Zv7" secondAttribute="trailing" id="qkJ-Ti-i7V"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="9qV-zy-wRN" firstAttribute="trailing" secondItem="3Bb-Vb-5WQ" secondAttribute="trailing" id="4wx-bf-oyX"/>
-                            <constraint firstItem="im6-FC-sCJ" firstAttribute="top" secondItem="3Bb-Vb-5WQ" secondAttribute="bottom" constant="8" id="8FJ-TA-Toz"/>
-                            <constraint firstItem="pps-9w-csS" firstAttribute="trailing" secondItem="G8T-0Q-50z" secondAttribute="trailing" id="DnM-SQ-FsM"/>
-                            <constraint firstItem="SOe-HS-qYh" firstAttribute="trailing" secondItem="G8T-0Q-50z" secondAttribute="trailing" id="MDt-If-05Z"/>
-                            <constraint firstItem="G8T-0Q-50z" firstAttribute="leading" secondItem="3Bb-Vb-5WQ" secondAttribute="trailing" constant="123" id="MFc-Pd-xWw"/>
-                            <constraint firstItem="pps-9w-csS" firstAttribute="top" secondItem="G8T-0Q-50z" secondAttribute="bottom" constant="8" id="Or9-xM-JUd"/>
+                            <constraint firstItem="g08-Zr-Tru" firstAttribute="top" secondItem="abp-SX-4Ho" secondAttribute="bottom" constant="8" id="2cx-i8-lWR"/>
+                            <constraint firstItem="K23-XQ-MS8" firstAttribute="top" secondItem="XoB-c5-du8" secondAttribute="bottom" constant="8" id="5Sd-tx-DgT"/>
+                            <constraint firstItem="abp-SX-4Ho" firstAttribute="top" secondItem="LvH-zi-SHf" secondAttribute="bottom" constant="16" id="5je-Sf-6iH"/>
+                            <constraint firstItem="XoB-c5-du8" firstAttribute="top" secondItem="LvH-zi-SHf" secondAttribute="bottom" constant="16" id="B9T-An-Cl3"/>
+                            <constraint firstItem="K23-XQ-MS8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="BbU-3Y-DVu"/>
+                            <constraint firstItem="jc9-ou-W4W" firstAttribute="top" secondItem="LvH-zi-SHf" secondAttribute="bottom" constant="16" id="NE9-qf-hwg"/>
+                            <constraint firstItem="abp-SX-4Ho" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ovb-Ds-HL3"/>
                             <constraint firstItem="LvH-zi-SHf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="T9I-tT-dL3"/>
-                            <constraint firstItem="G8T-0Q-50z" firstAttribute="bottom" secondItem="3Bb-Vb-5WQ" secondAttribute="bottom" id="WJR-5K-Gpr"/>
-                            <constraint firstItem="im6-FC-sCJ" firstAttribute="trailing" secondItem="3Bb-Vb-5WQ" secondAttribute="trailing" id="XkH-Cb-2rn"/>
-                            <constraint firstItem="G8T-0Q-50z" firstAttribute="top" secondItem="LvH-zi-SHf" secondAttribute="bottom" constant="8" id="Xs8-cs-O0U"/>
-                            <constraint firstItem="SOe-HS-qYh" firstAttribute="top" secondItem="pps-9w-csS" secondAttribute="bottom" constant="8" id="ZZ7-48-1oE"/>
-                            <constraint firstItem="3Bb-Vb-5WQ" firstAttribute="top" secondItem="LvH-zi-SHf" secondAttribute="bottom" constant="8" id="bb0-6e-0hv"/>
+                            <constraint firstItem="XoB-c5-du8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aMB-JX-Nnj"/>
+                            <constraint firstItem="g08-Zr-Tru" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bH9-pX-1YK"/>
+                            <constraint firstItem="6uX-dI-9qX" firstAttribute="top" secondItem="jc9-ou-W4W" secondAttribute="bottom" constant="8" id="dzx-8B-Bnu"/>
                             <constraint firstItem="LvH-zi-SHf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="goV-vD-VtQ"/>
-                            <constraint firstItem="SOe-HS-qYh" firstAttribute="bottom" secondItem="9qV-zy-wRN" secondAttribute="bottom" id="h2M-Lw-9xT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G8T-0Q-50z" secondAttribute="trailing" constant="16" id="hs1-03-lhZ"/>
-                            <constraint firstItem="9qV-zy-wRN" firstAttribute="top" secondItem="im6-FC-sCJ" secondAttribute="bottom" constant="8" id="mtR-06-Quv"/>
-                            <constraint firstItem="G8T-0Q-50z" firstAttribute="top" secondItem="LvH-zi-SHf" secondAttribute="bottom" constant="8" id="pT5-E0-aOR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6uX-dI-9qX" secondAttribute="trailing" constant="16" id="off-wk-LqX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jc9-ou-W4W" secondAttribute="trailing" constant="16" id="rte-ZK-O7s"/>
                             <constraint firstItem="LvH-zi-SHf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yBc-Ka-IHA"/>
-                            <constraint firstItem="pps-9w-csS" firstAttribute="bottom" secondItem="im6-FC-sCJ" secondAttribute="bottom" id="zhC-JA-Qgn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="qView" destination="LvH-zi-SHf" id="CDk-yn-ked"/>
-                        <outlet property="valCos" destination="im6-FC-sCJ" id="koY-ZW-CY9"/>
-                        <outlet property="valCosec" destination="G8T-0Q-50z" id="tnZ-jB-Pdx"/>
-                        <outlet property="valCot" destination="SOe-HS-qYh" id="N4F-Xq-H1C"/>
-                        <outlet property="valSec" destination="pps-9w-csS" id="DkW-3j-tPX"/>
-                        <outlet property="valSin" destination="3Bb-Vb-5WQ" id="EEB-py-2Q0"/>
-                        <outlet property="valTan" destination="9qV-zy-wRN" id="NAy-BK-X1G"/>
+                        <outlet property="valCos" destination="kav-tU-hOR" id="ti9-Ag-IXa"/>
+                        <outlet property="valCosec" destination="gpM-Ph-1qB" id="twa-al-EUX"/>
+                        <outlet property="valCot" destination="ZOD-31-Zv7" id="nKg-ZO-cro"/>
+                        <outlet property="valSec" destination="ovd-8D-E1O" id="VFt-C0-hcE"/>
+                        <outlet property="valSin" destination="SP2-W5-z9y" id="T4V-DO-IzK"/>
+                        <outlet property="valTan" destination="Quj-Ix-sG1" id="iuh-g3-fCO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
         </scene>
     </scenes>
 </document>

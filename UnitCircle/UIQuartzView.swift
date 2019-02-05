@@ -126,9 +126,12 @@ class UIQuartzView: UIView {
         context.move(to: CGPoint(x:origin.x, y:center.y))
         context.addLine(to: CGPoint(x:width, y:center.y))
 
+        context.strokePath()
+
         // Draw the Unit Circle
         // Each grid segment = 0.2 units
         // 5 grid segments = 1.0 unit
+        context.setLineWidth(2.0)
         context.addArc(center: center, radius: gridSize * 5, startAngle: 0.0, endAngle: 2 * .pi, clockwise: false)
         context.strokePath()
 

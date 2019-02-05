@@ -13,6 +13,7 @@ class UIFractionView: UIView {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         label.textAlignment = .center
+        label.backgroundColor = .clear
         return label
     }()
     
@@ -28,6 +29,7 @@ class UIFractionView: UIView {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         label.textAlignment = .center
+        label.backgroundColor = .clear
         return label
     }()
 
@@ -45,8 +47,6 @@ class UIFractionView: UIView {
     
     // Place UILabels for numerator, denominator and middle bar
     private func setupView() {
-        backgroundColor = .lightGray
-
         // Top half for numerator
         numerator.frame = CGRect(x:0, y:0, width:frame.width, height:frame.height/2)
         addSubview(numerator)
