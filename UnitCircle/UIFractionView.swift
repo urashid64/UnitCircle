@@ -10,7 +10,7 @@ import UIKit
 
 class UIFractionView: UIView {
     private var numerator: UILabel = {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         label.textAlignment = .center
         label.backgroundColor = .clear
@@ -18,7 +18,7 @@ class UIFractionView: UIView {
     }()
     
     private var embar: UILabel = {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
         label.textAlignment = .center
         label.numberOfLines = 1
         label.backgroundColor = .clear
@@ -26,13 +26,18 @@ class UIFractionView: UIView {
     }()
 
     private var denominator: UILabel = {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         label.textAlignment = .center
         label.backgroundColor = .clear
         return label
     }()
 
+    private var font: UIFont = {
+        let font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        return font
+    }()
+    
     // Init from Code
     override init (frame : CGRect) {
         super.init(frame : frame)
@@ -81,9 +86,9 @@ class UIFractionView: UIView {
                 setLabels(top: components[0], bottom: components[1])
 //                print ("Valid Fraction")
             }
-            else {
+//            else {
 //                print ("Invalid Format")
-            }
+//            }
  
         default:
 //            print ("Invalid Format")
@@ -91,10 +96,28 @@ class UIFractionView: UIView {
         }
     }
 
+    // Text color for component UILabels
+    func setTextColor (color: UIColor)
+    {
+        numerator.textColor = color
+        embar.textColor = color
+        denominator.textColor = color
+    }
+
+    // Font for component UILabels
+    func setFont (font: UIFont)
+    {
+        self.font = font
+        numerator.font = font
+        embar.font = font
+        denominator.font = font
+    }
+    
     // Show values in labels
     private func setLabels (top: String, bottom: String)
     {
         // Format: "nn/nn" - Show fraction
+        // Use symbol font for the middle bar
         if (top.count > 0 && bottom.count > 0) {
             numerator.text = top
             embar.font = UIFont.init(name:"Symbol", size:16)
@@ -105,7 +128,7 @@ class UIFractionView: UIView {
         else {
             numerator.text = ""
             denominator.text = ""
-            embar.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+            embar.font = self.font
             embar.text = top
         }
     }
