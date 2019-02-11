@@ -20,7 +20,7 @@ class UIQuartzView: UIView {
     let gridSegments = 12
 
     // Base axis for each quadrant
-    enum axis {
+    enum axis : Int {
         case plus_x
         case plus_y
         case minus_x
@@ -28,42 +28,49 @@ class UIQuartzView: UIView {
     }
 
     // Angle for each base axis (in radians)
-    let axisAngle: [axis : Float] = [
-        .plus_x:     0.0,
-        .plus_y:    .pi/2,
-        .minus_x:   .pi,
-        .minus_y:   .pi/2 * 3
+    let axisAngle: [axis : (Float, Int)] = [
+        .plus_x:    (0.0,         0),
+        .plus_y:    (.pi/2,      90),
+        .minus_x:   (.pi,       180),
+        .minus_y:   (.pi/2*3,   270)
     ]
 
     // Offsets of interest from the base axis
-    enum step {
+    enum step : Int {
+        case zero
         case pi_by_six
         case pi_by_four
         case pi_by_three
     }
-    
+
     // Angle for each offset (in radians)
-    let stepAngle: [step : Float] = [
-        .pi_by_six:     .pi/6,
-        .pi_by_four:    .pi/4,
-        .pi_by_three:   .pi/3
+    let stepAngle: [step : (Float, Int)] = [
+        .zero:          (  0.0,  0),
+        .pi_by_six:     (.pi/6, 30),
+        .pi_by_four:    (.pi/4, 45),
+        .pi_by_three:   (.pi/3, 60)
     ]
-    
+
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
 
-        let context: CGContext = UIGraphicsGetCurrentContext()!
-        
         // Extents of the drawing area
-        drawBorder(context)
+        drawBorder()
         
         // Components in the drawing ares
-        // Includes the Grid, the unit circle, and X-Y axis
-        drawGrid(context)
+        // Includes the Grid, the unit circle, and step lines
+        drawGrid()
+        drawUnitCircle()
+        drawStepLines()
     }
     
-    func drawBorder(_ context:CGContext) {
+    
+    func drawBorder() {
+        let context: CGContext = UIGraphicsGetCurrentContext()!
+        // Save existing graphic state
+        context.saveGState()
+
         // Top-Left corner of the view in view coordinates
         let origin = CGPoint (x:0.0, y:0.0)
 
@@ -78,9 +85,13 @@ class UIQuartzView: UIView {
         context.addLine(to: origin)
 
         context.strokePath()
+
+        // Restore previous graphic state
+        context.restoreGState()
     }
     
-    func drawGrid (_ context:CGContext) {
+    func drawGrid () {
+        let context: CGContext = UIGraphicsGetCurrentContext()!
         // Save existing graphic state
         context.saveGState()
         
@@ -127,7 +138,26 @@ class UIQuartzView: UIView {
         context.addLine(to: CGPoint(x:width, y:center.y))
 
         context.strokePath()
+        
+        // Restore previous graphic state
+        context.restoreGState()
+    }
+    
+    func drawUnitCircle () {
+        let context: CGContext = UIGraphicsGetCurrentContext()!
+        // Save existing graphic state
+        context.saveGState()
 
+        // Size of Drawing Area in view coordinates
+        let width = self.frame.width
+        let height = self.frame.height
+        
+        // Center point of the drawing area
+        let center = CGPoint (x: width/2.0, y: height/2.0)
+        
+        // Size of grid in view coordinates
+        let gridSize = width / gridSegments
+        
         // Draw the Unit Circle
         // Each grid segment = 0.2 units
         // 5 grid segments = 1.0 unit
@@ -135,13 +165,27 @@ class UIQuartzView: UIView {
         context.addArc(center: center, radius: gridSize * 5, startAngle: 0.0, endAngle: 2 * .pi, clockwise: false)
         context.strokePath()
 
-        // Draw step lines in light gray
+        // Restore previous graphic state
+        context.restoreGState()
+    }
+    
+    func drawStepLines () {
+        let context: CGContext = UIGraphicsGetCurrentContext()!
+        // Save existing graphic state
+        context.saveGState()
+        
+        // Size of grid in view coordinates
+        let gridSize = frame.width / gridSegments
+
+       // Draw step lines in light gray
         context.setLineWidth(1.0)
         context.setStrokeColor(red:0.667, green:0.667, blue:0.667, alpha:1.0);
         
-        for (_, base) in axisAngle {
-            for (_, step) in stepAngle {
-                drawLine(context, radius: Float(gridSize * 5.25), angle: base + step)
+        for (_, (axis, _)) in axisAngle {
+            for (_, (step, _)) in stepAngle {
+                if (step > 0) {
+                    drawLine(context, radius: Float(gridSize * 5.25), angle: axis+step)
+                }
             }
         }
 
