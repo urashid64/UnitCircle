@@ -19,38 +19,6 @@ class UIQuartzView: UIView {
     // Each grid segment represents 0.2 units
     let gridSegments = 12
 
-    // Base axis for each quadrant
-    enum axis : Int {
-        case plus_x
-        case plus_y
-        case minus_x
-        case minus_y
-    }
-
-    // Angle for each base axis (in radians)
-    let axisAngle: [axis : (Float, Int)] = [
-        .plus_x:    (0.0,         0),
-        .plus_y:    (.pi/2,      90),
-        .minus_x:   (.pi,       180),
-        .minus_y:   (.pi/2*3,   270)
-    ]
-
-    // Offsets of interest from the base axis
-    enum step : Int {
-        case zero
-        case pi_by_six
-        case pi_by_four
-        case pi_by_three
-    }
-
-    // Angle for each offset (in radians)
-    let stepAngle: [step : (Float, Int)] = [
-        .zero:          (  0.0,  0),
-        .pi_by_six:     (.pi/6, 30),
-        .pi_by_four:    (.pi/4, 45),
-        .pi_by_three:   (.pi/3, 60)
-    ]
-
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
@@ -60,9 +28,11 @@ class UIQuartzView: UIView {
         
         // Components in the drawing ares
         // Includes the Grid, the unit circle, and step lines
+        // Also highlights the current angle
         drawGrid()
         drawUnitCircle()
         drawStepLines()
+        highlight()
     }
     
     
@@ -89,7 +59,8 @@ class UIQuartzView: UIView {
         // Restore previous graphic state
         context.restoreGState()
     }
-    
+
+
     func drawGrid () {
         let context: CGContext = UIGraphicsGetCurrentContext()!
         // Save existing graphic state
@@ -142,7 +113,8 @@ class UIQuartzView: UIView {
         // Restore previous graphic state
         context.restoreGState()
     }
-    
+
+
     func drawUnitCircle () {
         let context: CGContext = UIGraphicsGetCurrentContext()!
         // Save existing graphic state
@@ -168,7 +140,8 @@ class UIQuartzView: UIView {
         // Restore previous graphic state
         context.restoreGState()
     }
-    
+
+
     func drawStepLines () {
         let context: CGContext = UIGraphicsGetCurrentContext()!
         // Save existing graphic state
@@ -192,7 +165,30 @@ class UIQuartzView: UIView {
         // Restore previous graphic state
         context.restoreGState()
     }
-    
+
+
+    func highlight () {
+        let context: CGContext = UIGraphicsGetCurrentContext()!
+        // Save existing graphic state
+        context.saveGState()
+        
+        let axis = currentAxis
+        let step = currentStep
+
+        // Size of grid in view coordinates
+        let gridSize = frame.width / gridSegments
+        
+        // Draw step lines in light gray
+        context.setLineWidth(2.0)
+        context.setStrokeColor(red:0.0, green:0.0, blue:0.0, alpha:1.0);
+        
+        drawLine(context, radius: Float(gridSize * 5.25), angle: axisAngle[axis]!.0 + stepAngle[step]!.0)
+
+        // Restore previous graphic state
+        context.restoreGState()
+    }
+
+
     // Draw a radial line of specified length and at a specified positive angle
     func drawLine (_ context:CGContext, radius length:Float, angle theta:Float) {
         // Center point of the drawing area
