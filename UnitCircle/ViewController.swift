@@ -8,41 +8,6 @@
 
 import UIKit
 
-// Base axis for each quadrant
-enum axis : CaseIterable {
-    case plus_x
-    case plus_y
-    case minus_x
-    case minus_y
-}
-
-// Angle for each base axis (in radians)
-let axisAngle: [axis : (Float, Int)] = [
-    .plus_x:    (0.0,         0),
-    .plus_y:    (.pi/2,      90),
-    .minus_x:   (.pi,       180),
-    .minus_y:   (.pi/2*3,   270)
-]
-
-// Offsets of interest from the base axis
-enum step : CaseIterable {
-    case zero
-    case pi_by_six
-    case pi_by_four
-    case pi_by_three
-}
-
-// Angle for each offset (in radians)
-let stepAngle: [step : (Float, Int)] = [
-    .zero:          (  0.0,  0),
-    .pi_by_six:     (.pi/6, 30),
-    .pi_by_four:    (.pi/4, 45),
-    .pi_by_three:   (.pi/3, 60)
-]
-
-var currentAxis : axis = .plus_x
-var currentStep : step = .pi_by_six
-
 class ViewController: UIViewController {
     // Angle values
     @IBOutlet weak var valRadians: UIFractionView!
@@ -146,8 +111,9 @@ class ViewController: UIViewController {
 
 
     func updateTrigLabels () {
-        let axis = axisAngle[currentAxis]!.1
-        let step = stepAngle[currentStep]!.1
+        let td = TrigData.instance
+        let axis = td.axisAngle[td.currentAxis]!.1
+        let step = td.stepAngle[td.currentStep]!.1
         
         valRadians.setFraction(str: trigValues[axis+step]!.angle.0)
         valDegrees.setFraction(str: trigValues[axis+step]!.angle.1)
@@ -169,12 +135,13 @@ class ViewController: UIViewController {
 
 
     @objc func handleTap (_: UITapGestureRecognizer) {
-        let nextStepIndex = (step.allCases.index(of: currentStep)! + 1) % step.allCases.count
-        currentStep = step.allCases[nextStepIndex]
-        
+        let td = TrigData.instance
+        let nextStepIndex = (TrigData.step.allCases.index(of: td.currentStep)! + 1) % TrigData.step.allCases.count
+        td.currentStep = TrigData.step.allCases[nextStepIndex]
+
         if nextStepIndex == 0 {
-            let nextAxisIndex = (axis.allCases.index(of: currentAxis)! + 1) % axis.allCases.count
-            currentAxis = axis.allCases[nextAxisIndex]
+            let nextAxisIndex = (TrigData.axis.allCases.index(of: td.currentAxis)! + 1) % TrigData.axis.allCases.count
+            td.currentAxis = TrigData.axis.allCases[nextAxisIndex]
         }
         updateTrigLabels()
     }

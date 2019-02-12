@@ -14,6 +14,7 @@
 		9F7208E521FFAE0A000505E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F7208E321FFAE0A000505E9 /* LaunchScreen.storyboard */; };
 		9F7208ED21FFB165000505E9 /* UIQuartzView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7208EC21FFB165000505E9 /* UIQuartzView.swift */; };
 		9F7208EF22026AD9000505E9 /* UIFractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7208EE22026AD9000505E9 /* UIFractionView.swift */; };
+		9FCDC58D221359A100ABA9AB /* TrigData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDC58C221359A100ABA9AB /* TrigData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9F7208E621FFAE0A000505E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F7208EC21FFB165000505E9 /* UIQuartzView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIQuartzView.swift; sourceTree = "<group>"; };
 		9F7208EE22026AD9000505E9 /* UIFractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFractionView.swift; sourceTree = "<group>"; };
+		9FCDC58C221359A100ABA9AB /* TrigData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrigData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				9F7208DA21FFAE06000505E9 /* AppDelegate.swift */,
+				9FCDC58C221359A100ABA9AB /* TrigData.swift */,
 				9F7208DC21FFAE06000505E9 /* ViewController.swift */,
 				9F7208EE22026AD9000505E9 /* UIFractionView.swift */,
 				9F7208EC21FFB165000505E9 /* UIQuartzView.swift */,
@@ -145,6 +148,7 @@
 				9F7208DD21FFAE06000505E9 /* ViewController.swift in Sources */,
 				9F7208EF22026AD9000505E9 /* UIFractionView.swift in Sources */,
 				9F7208DB21FFAE06000505E9 /* AppDelegate.swift in Sources */,
+				9FCDC58D221359A100ABA9AB /* TrigData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,6 @@ func + (lhs: CGFloat, rhs: Float) -> CGFloat { return lhs + CGFloat (rhs) }
 func - (lhs: CGFloat, rhs: Float) -> CGFloat { return lhs - CGFloat (rhs) }
 
 class UIQuartzView: UIView {
-
     // Each grid segment represents 0.2 units
     let gridSegments = 12
 
@@ -154,8 +153,9 @@ class UIQuartzView: UIView {
         context.setLineWidth(1.0)
         context.setStrokeColor(red:0.667, green:0.667, blue:0.667, alpha:1.0);
         
-        for (_, (axis, _)) in axisAngle {
-            for (_, (step, _)) in stepAngle {
+        let td = TrigData.instance
+        for (_, (axis, _)) in td.axisAngle {
+            for (_, (step, _)) in td.stepAngle {
                 if (step > 0) {
                     drawLine(context, radius: Float(gridSize * 5.25), angle: axis+step)
                 }
@@ -172,8 +172,9 @@ class UIQuartzView: UIView {
         // Save existing graphic state
         context.saveGState()
         
-        let axis = currentAxis
-        let step = currentStep
+        let td = TrigData.instance
+        let axis = td.currentAxis
+        let step = td.currentStep
 
         // Size of grid in view coordinates
         let gridSize = frame.width / gridSegments
@@ -182,7 +183,7 @@ class UIQuartzView: UIView {
         context.setLineWidth(2.0)
         context.setStrokeColor(red:0.0, green:0.0, blue:0.0, alpha:1.0);
         
-        drawLine(context, radius: Float(gridSize * 5.25), angle: axisAngle[axis]!.0 + stepAngle[step]!.0)
+        drawLine(context, radius: Float(gridSize * 5.25), angle: td.axisAngle[axis]!.0 + td.stepAngle[step]!.0)
 
         // Restore previous graphic state
         context.restoreGState()
