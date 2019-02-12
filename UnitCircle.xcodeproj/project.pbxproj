@@ -60,8 +60,8 @@
 		9F7208D921FFAE06000505E9 /* UnitCircle */ = {
 			isa = PBXGroup;
 			children = (
-				9F7208DA21FFAE06000505E9 /* AppDelegate.swift */,
 				9FCDC58C221359A100ABA9AB /* TrigData.swift */,
+				9F7208DA21FFAE06000505E9 /* AppDelegate.swift */,
 				9F7208DC21FFAE06000505E9 /* ViewController.swift */,
 				9F7208EE22026AD9000505E9 /* UIFractionView.swift */,
 				9F7208EC21FFB165000505E9 /* UIQuartzView.swift */,
