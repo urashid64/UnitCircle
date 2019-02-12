@@ -16,8 +16,11 @@ func - (lhs: CGFloat, rhs: Float) -> CGFloat { return lhs - CGFloat (rhs) }
 
 class UIQuartzView: UIView {
     // Each grid segment represents 0.2 units
-    let gridSegments = 12
-
+    private let gridSegments = 12
+    
+    // Top-Left corner of the view in view coordinates
+    let origin = CGPoint (x: 0.0, y: 0.0)
+    
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
@@ -39,9 +42,6 @@ class UIQuartzView: UIView {
         let context: CGContext = UIGraphicsGetCurrentContext()!
         // Save existing graphic state
         context.saveGState()
-
-        // Top-Left corner of the view in view coordinates
-        let origin = CGPoint (x:0.0, y:0.0)
 
         // Bottom-Right corner of the view in view coordinates
         let extent =  CGPoint (x:self.frame.width, y:self.frame.height)
@@ -65,18 +65,14 @@ class UIQuartzView: UIView {
         // Save existing graphic state
         context.saveGState()
         
-        // Size of Drawing Area in view coordinates
-        let width = self.frame.width
-        let height = self.frame.height
-        
         // Origin of the drawing area
         let origin = CGPoint(x: 0.0, y: 0.0)
 
         // Center point of the drawing area
-        let center = CGPoint (x: width/2.0, y: height/2.0)
-        
+        let center = CGPoint (x: frame.width/2.0, y: frame.height/2.0)
+
         // Size of grid in view coordinates
-        let gridSize = width / gridSegments
+        let gridSize = frame.width / gridSegments
         
         // Set dashed pattern for grid lines
         context.setLineWidth(1.0)
@@ -85,14 +81,14 @@ class UIQuartzView: UIView {
         // Vertical grid lines
         for i in 0...gridSegments {
             context.move(to: CGPoint(x: i*gridSize, y: origin.y))
-            context.addLine(to: CGPoint(x: i*gridSize, y: height))
+            context.addLine(to: CGPoint(x: i*gridSize, y: frame.height))
         }
         context.strokePath()
         
         // Horizontal grid lines
         for i in 0...gridSegments {
             context.move(to: CGPoint(x: origin.x, y: i * gridSize))
-            context.addLine(to: CGPoint(x: width, y: i * gridSize))
+            context.addLine(to: CGPoint(x: frame.width, y: i * gridSize))
         }
         context.strokePath()
 
@@ -101,11 +97,11 @@ class UIQuartzView: UIView {
 
         // Vertical Axis
         context.move(to: CGPoint(x: center.x, y: origin.y))
-        context.addLine(to: CGPoint(x:center.x, y: height))
+        context.addLine(to: CGPoint(x: center.x, y: frame.height))
 
         // Horizontal Axis
-        context.move(to: CGPoint(x:origin.x, y:center.y))
-        context.addLine(to: CGPoint(x:width, y:center.y))
+        context.move(to: CGPoint(x: origin.x, y: center.y))
+        context.addLine(to: CGPoint(x: frame.width, y: center.y))
 
         context.strokePath()
         
@@ -120,14 +116,14 @@ class UIQuartzView: UIView {
         context.saveGState()
 
         // Size of Drawing Area in view coordinates
-        let width = self.frame.width
-        let height = self.frame.height
+//        let width = self.frame.width
+//        let height = self.frame.height
         
         // Center point of the drawing area
-        let center = CGPoint (x: width/2.0, y: height/2.0)
+        let center = CGPoint (x: frame.width/2.0, y: frame.height/2.0)
         
         // Size of grid in view coordinates
-        let gridSize = width / gridSegments
+        let gridSize = frame.width / gridSegments
         
         // Draw the Unit Circle
         // Each grid segment = 0.2 units
@@ -146,6 +142,9 @@ class UIQuartzView: UIView {
         // Save existing graphic state
         context.saveGState()
         
+        // Center point of the drawing area
+        let center = CGPoint (x: frame.width/2.0, y: frame.height/2.0)
+        
         // Size of grid in view coordinates
         let gridSize = frame.width / gridSegments
 
@@ -157,7 +156,7 @@ class UIQuartzView: UIView {
         for (_, (axis, _)) in td.axisAngle {
             for (_, (step, _)) in td.stepAngle {
                 if (step > 0) {
-                    drawLine(context, radius: Float(gridSize * 5.25), angle: axis+step)
+                    drawLine(context, center: center, radius: Float(gridSize * 5.25), angle: axis+step)
                 }
             }
         }
@@ -173,17 +172,21 @@ class UIQuartzView: UIView {
         context.saveGState()
         
         let td = TrigData.instance
-        let axis = td.currentAxis
-        let step = td.currentStep
+        let center = CGPoint (x: frame.width/2.0, y: frame.height/2.0)
+        let angle = td.axisAngle[td.currentAxis]!.0 + td.stepAngle[td.currentStep]!.0
 
         // Size of grid in view coordinates
         let gridSize = frame.width / gridSegments
+        let radius = Float(gridSize * 5.0)
         
-        // Draw step lines in light gray
+        // Draw x,y components in double thickness
         context.setLineWidth(2.0)
-        context.setStrokeColor(red:0.0, green:0.0, blue:0.0, alpha:1.0);
+        drawComponents(context, center: center, radius: radius, angle: angle)
         
-        drawLine(context, radius: Float(gridSize * 5.25), angle: td.axisAngle[axis]!.0 + td.stepAngle[step]!.0)
+        // Draw highlight line in black
+        context.setLineWidth(2.5)
+        context.setStrokeColor(red:0.0, green:0.0, blue:0.0, alpha:1.0);
+        drawLine(context, center: center, radius: radius, angle: angle)
 
         // Restore previous graphic state
         context.restoreGState()
@@ -191,16 +194,33 @@ class UIQuartzView: UIView {
 
 
     // Draw a radial line of specified length and at a specified positive angle
-    func drawLine (_ context:CGContext, radius length:Float, angle theta:Float) {
-        // Center point of the drawing area
-        let center = CGPoint (x: self.frame.width/2.0, y: self.frame.height/2.0)
-        
+    func drawLine (_ context:CGContext, center: CGPoint, radius length:Float, angle theta:Float) {
+    
         // End point of the radial line
         let endPt = CGPoint (x: center.x + length * cos(theta), y: center.y - length * sin(theta))
         
         // Draw line
         context.move(to: center)
         context.addLine(to: endPt)
+        context.strokePath()
+    }
+
+
+    // Draw x, y components of the current angle
+    func drawComponents (_ context:CGContext, center: CGPoint, radius length:Float, angle theta:Float) {
+        let endPtX = CGPoint (x: center.x + length * cos(theta), y: center.y)
+        let endPtY = CGPoint (x: center.x + length * cos(theta), y: center.y - length * sin(theta))
+
+        // X component in Red from center to end point on x-axis
+        context.setStrokeColor(red:1.0, green:0.0, blue:0.0, alpha:1.0)
+        context.move(to: center)
+        context.addLine(to: endPtX)
+        context.strokePath()
+
+        // Y component in Blue from end point on x-axis to end Pt on circle
+        context.setStrokeColor(red:0.0, green:0.0, blue:1.0, alpha:1.0)
+        context.move(to: endPtX)
+        context.addLine(to: endPtY)
         context.strokePath()
     }
 }
