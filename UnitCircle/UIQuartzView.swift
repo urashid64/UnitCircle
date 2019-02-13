@@ -169,9 +169,6 @@ class UIQuartzView: UIView {
         // Center point in view coordinates
         let center = CGPoint (x: frame.width/2.0, y: frame.height/2.0)
 
-        let td = TrigData.instance
-        let angle = td.axisAngle[td.currentAxis]!.0 + td.stepAngle[td.currentStep]!.0
-
         // Size of grid in view coordinates
         let gridSize = frame.width / gridSegments
         
@@ -180,12 +177,12 @@ class UIQuartzView: UIView {
 
         // Draw x,y components in double thickness
         context.setLineWidth(2.0)
-        drawComponents(context, center: center, radius: radius, angle: angle)
+        drawComponents(context, center: center, radius: radius, angle: TrigData.instance.currentAngle())
         
         // Draw highlight line in black
         context.setLineWidth(2.5)
         context.setStrokeColor(red:0.0, green:0.0, blue:0.0, alpha:1.0);
-        drawLine(context, center: center, radius: radius, angle: angle, marker: true)
+        drawLine(context, center: center, radius: radius, angle: TrigData.instance.currentAngle(), marker: true)
 
         // Restore previous graphic state
         context.restoreGState()

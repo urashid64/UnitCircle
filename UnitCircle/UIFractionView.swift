@@ -71,7 +71,7 @@ class UIFractionView: UIView {
     // "nn"     For number
     // "nn/nn"  For fraction
     // Everything else is disregarded
-    func setFraction (str: String)
+    func setFraction (_ str: String)
     {
         let components = str.components(separatedBy: "/")
 //        print ("String: \(str), Components: \(components)")

@@ -47,19 +47,19 @@ class ViewController: UIViewController {
     func updateTrigLabels () {
         
         let tv = TrigData.instance.currentTrigValues()
-        valRadians.setFraction(str: tv.angle.0)
-        valDegrees.setFraction(str: tv.angle.1)
+        valRadians.setFraction(tv.angle.rad)
+        valDegrees.setFraction(tv.angle.deg)
         
-        valSin.setFraction(str: tv.sin.0)
-        valCos.setFraction(str: tv.cos.0)
-        valTan.setFraction(str: tv.tan.0)
+        valSin.setFraction(tv.sin.0)
+        valCos.setFraction(tv.cos.0)
+        valTan.setFraction(tv.tan.0)
         
-        valSec.setFraction(str: tv.sec.0)
-        valCosec.setFraction(str: tv.csc.0)
-        valCot.setFraction(str: tv.cot.0)
+        valSec.setFraction(tv.sec.0)
+        valCosec.setFraction(tv.csc.0)
+        valCot.setFraction(tv.cot.0)
         
-        valX.setFraction(str: tv.cos.0)
-        valY.setFraction(str: tv.sin.0)
+        valX.setFraction(tv.cos.0)
+        valY.setFraction(tv.sin.0)
 
         // Refresh to draw new highlighted angle
         qView.setNeedsDisplay()
