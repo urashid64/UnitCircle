@@ -317,6 +317,34 @@
                                     <action selector="toggleFracDecimal:" destination="BYZ-38-t0r" eventType="valueChanged" id="IdG-im-0lC"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84c-Bn-uKC" userLabel="CW Button">
+                                <rect key="frame" x="16" y="395" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="6LQ-6W-HeF"/>
+                                    <constraint firstAttribute="width" constant="32" id="QJd-Bb-UUO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="50"/>
+                                <state key="normal" title="↻">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveClockwise:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Zg-5c-Enn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syx-uk-XfC" userLabel="CCW Button">
+                                <rect key="frame" x="327" y="393" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="6mW-Gz-bSb"/>
+                                    <constraint firstAttribute="height" constant="32" id="BiK-iU-4Zc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="50"/>
+                                <state key="normal" title="↺">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveCounterCW:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yot-7B-oZe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -325,6 +353,7 @@
                             <constraint firstItem="abp-SX-4Ho" firstAttribute="top" secondItem="XoB-c5-du8" secondAttribute="top" id="5je-Sf-6iH"/>
                             <constraint firstItem="XoB-c5-du8" firstAttribute="top" secondItem="uRc-NR-unG" secondAttribute="bottom" constant="12" id="B9T-An-Cl3"/>
                             <constraint firstItem="K23-XQ-MS8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="BbU-3Y-DVu"/>
+                            <constraint firstItem="syx-uk-XfC" firstAttribute="bottom" secondItem="uRc-NR-unG" secondAttribute="bottom" constant="-2" id="IKy-Bc-5Vs"/>
                             <constraint firstItem="jc9-ou-W4W" firstAttribute="top" secondItem="XoB-c5-du8" secondAttribute="top" id="NE9-qf-hwg"/>
                             <constraint firstItem="uRc-NR-unG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ntt-lZ-2ec"/>
                             <constraint firstItem="abp-SX-4Ho" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ovb-Ds-HL3"/>
@@ -332,6 +361,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zuM-Ec-BJ8" secondAttribute="trailing" constant="16" id="WPR-hL-2Cx"/>
                             <constraint firstItem="XoB-c5-du8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aMB-JX-Nnj"/>
                             <constraint firstItem="g08-Zr-Tru" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bH9-pX-1YK"/>
+                            <constraint firstItem="84c-Bn-uKC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bpJ-ob-dme"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="syx-uk-XfC" secondAttribute="trailing" constant="16" id="cqP-Lt-P9a"/>
+                            <constraint firstItem="uRc-NR-unG" firstAttribute="bottom" secondItem="84c-Bn-uKC" secondAttribute="bottom" id="dRs-aH-dfK"/>
                             <constraint firstItem="6uX-dI-9qX" firstAttribute="top" secondItem="jc9-ou-W4W" secondAttribute="bottom" constant="8" id="dzx-8B-Bnu"/>
                             <constraint firstItem="LvH-zi-SHf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="goV-vD-VtQ"/>
                             <constraint firstItem="uRc-NR-unG" firstAttribute="top" secondItem="LvH-zi-SHf" secondAttribute="bottom" constant="12" id="nKK-gn-oHg"/>

@@ -43,11 +43,6 @@ class ViewController: UIViewController {
         
         // Start with fractions
         optFracDecimal.selectedSegmentIndex = 0
-
-        let tapRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(handleTap))
-        tapRecognizer.numberOfTapsRequired = 1
-        qView.addGestureRecognizer(tapRecognizer)
-
         updateTrigLabels()
     }
 
@@ -87,13 +82,33 @@ class ViewController: UIViewController {
         qView.setNeedsDisplay()
     }
 
+    //
+    // UI Action Handlers
+    //
 
-    @objc func handleTap (_: UITapGestureRecognizer) {
-        TrigData.instance.nextAngle()
-        updateTrigLabels()
-    }
-    
     @IBAction func toggleFracDecimal(_ sender: UISegmentedControl) {
         updateTrigLabels()
     }
+
+
+    @IBAction func moveClockwise(_ sender: UIButton) {
+        TrigData.instance.prevAngle()
+        updateTrigLabels()
+    }
+
+
+    @IBAction func moveCounterCW(_ sender: UIButton) {
+        TrigData.instance.nextAngle()
+        updateTrigLabels()
+    }
 }
+
+/*
+ ↺
+ANTICLOCKWISE OPEN CIRCLE ARROW
+Unicode: U+21BA, UTF-8: E2 86 BA
+
+↻
+CLOCKWISE OPEN CIRCLE ARROW
+Unicode: U+21BB, UTF-8: E2 86 BB
+*/

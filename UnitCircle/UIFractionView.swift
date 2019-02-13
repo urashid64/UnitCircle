@@ -11,12 +11,12 @@ import UIKit
 class UIFractionView: UIView {
     private var numerator: UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
-        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+//        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.textAlignment = .center
         label.backgroundColor = .clear
         return label
     }()
-    
+
     private var embar: UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
         label.textAlignment = .center
@@ -27,44 +27,46 @@ class UIFractionView: UIView {
 
     private var denominator: UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
-        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+//        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.textAlignment = .center
         label.backgroundColor = .clear
         return label
     }()
 
     private var font: UIFont = {
-        let font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        let font = UIFont.systemFont(ofSize: 15, weight: .regular)
         return font
     }()
-    
+
     // Init from Code
     override init (frame : CGRect) {
         super.init(frame : frame)
         setupView()
     }
-    
+
     // Init from Storyboard or Xib
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupView()
     }
-    
+
     // Place UILabels for numerator, denominator and middle bar
     private func setupView() {
         // Top half for numerator
         numerator.frame = CGRect(x:0, y:0, width:frame.width, height:frame.height/2)
+        numerator.font = self.font
         addSubview(numerator)
-        
+
         // Bottom half for denominator
         denominator.frame = CGRect(x:0, y:frame.height/2, width:frame.width, height:frame.height/2)
+        denominator.font = font
         addSubview(denominator)
 
         // Embar covers the whole frame, can be used for non-fractional text or middle bar
         embar.frame = CGRect(x:0, y:0, width:frame.width, height:frame.height)
         addSubview(embar)
     }
-    
+
     // Function to parse a string formatted as fraction
     // Valid formats are:
     // ""       For empty string
@@ -89,7 +91,7 @@ class UIFractionView: UIView {
 //            else {
 //                print ("Invalid Format")
 //            }
- 
+
         default:
 //            print ("Invalid Format")
             break
@@ -112,7 +114,7 @@ class UIFractionView: UIView {
         embar.font = font
         denominator.font = font
     }
-    
+
     // Show values in labels
     private func setLabels (top: String, bottom: String)
     {
@@ -141,4 +143,3 @@ class UIFractionView: UIView {
     }
     */
 }
-
