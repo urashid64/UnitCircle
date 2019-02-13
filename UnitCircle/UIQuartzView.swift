@@ -34,7 +34,7 @@ class UIQuartzView: UIView {
         drawGrid()
         drawUnitCircle()
         drawStepLines()
-        highlight()
+        drawHighlight()
     }
     
     
@@ -44,7 +44,7 @@ class UIQuartzView: UIView {
         context.saveGState()
 
         // Bottom-Right corner of the view in view coordinates
-        let extent =  CGPoint (x:self.frame.width, y:self.frame.height)
+        let extent =  CGPoint (x: frame.width, y: frame.height)
 
         // Draw using default properties set in CG context
         context.move(to: origin)
@@ -68,7 +68,7 @@ class UIQuartzView: UIView {
         // Origin of the drawing area
         let origin = CGPoint(x: 0.0, y: 0.0)
 
-        // Center point of the drawing area
+        // Center point in view coordinates
         let center = CGPoint (x: frame.width/2.0, y: frame.height/2.0)
 
         // Size of grid in view coordinates
@@ -80,8 +80,8 @@ class UIQuartzView: UIView {
         
         // Vertical grid lines
         for i in 0...gridSegments {
-            context.move(to: CGPoint(x: i*gridSize, y: origin.y))
-            context.addLine(to: CGPoint(x: i*gridSize, y: frame.height))
+            context.move(to: CGPoint(x: i * gridSize, y: origin.y))
+            context.addLine(to: CGPoint(x: i * gridSize, y: frame.height))
         }
         context.strokePath()
         
@@ -115,18 +115,13 @@ class UIQuartzView: UIView {
         // Save existing graphic state
         context.saveGState()
 
-        // Size of Drawing Area in view coordinates
-//        let width = self.frame.width
-//        let height = self.frame.height
-        
-        // Center point of the drawing area
+        // Center point in view coordinates
         let center = CGPoint (x: frame.width/2.0, y: frame.height/2.0)
         
         // Size of grid in view coordinates
         let gridSize = frame.width / gridSegments
         
         // Draw the Unit Circle
-        // Each grid segment = 0.2 units
         // 5 grid segments = 1.0 unit
         context.setLineWidth(2.0)
         context.addArc(center: center, radius: gridSize * 5, startAngle: 0.0, endAngle: 2 * .pi, clockwise: false)
@@ -142,7 +137,7 @@ class UIQuartzView: UIView {
         // Save existing graphic state
         context.saveGState()
         
-        // Center point of the drawing area
+        // Center point in view coordinates
         let center = CGPoint (x: frame.width/2.0, y: frame.height/2.0)
         
         // Size of grid in view coordinates
@@ -166,19 +161,23 @@ class UIQuartzView: UIView {
     }
 
 
-    func highlight () {
+    func drawHighlight () {
         let context: CGContext = UIGraphicsGetCurrentContext()!
         // Save existing graphic state
         context.saveGState()
         
-        let td = TrigData.instance
+        // Center point in view coordinates
         let center = CGPoint (x: frame.width/2.0, y: frame.height/2.0)
+
+        let td = TrigData.instance
         let angle = td.axisAngle[td.currentAxis]!.0 + td.stepAngle[td.currentStep]!.0
 
         // Size of grid in view coordinates
         let gridSize = frame.width / gridSegments
-        let radius = Float(gridSize * 5.0)
         
+        // 5 grid segments = 1.0 unit
+        let radius = Float(gridSize * 5.0)
+
         // Draw x,y components in double thickness
         context.setLineWidth(2.0)
         drawComponents(context, center: center, radius: radius, angle: angle)
@@ -186,15 +185,16 @@ class UIQuartzView: UIView {
         // Draw highlight line in black
         context.setLineWidth(2.5)
         context.setStrokeColor(red:0.0, green:0.0, blue:0.0, alpha:1.0);
-        drawLine(context, center: center, radius: radius, angle: angle)
+        drawLine(context, center: center, radius: radius, angle: angle, marker: true)
 
         // Restore previous graphic state
         context.restoreGState()
     }
 
-
+    // Helper Functions
+    
     // Draw a radial line of specified length and at a specified positive angle
-    func drawLine (_ context:CGContext, center: CGPoint, radius length:Float, angle theta:Float) {
+    func drawLine (_ context:CGContext, center: CGPoint, radius length:Float, angle theta:Float, marker:Bool = false) {
     
         // End point of the radial line
         let endPt = CGPoint (x: center.x + length * cos(theta), y: center.y - length * sin(theta))
@@ -203,6 +203,15 @@ class UIQuartzView: UIView {
         context.move(to: center)
         context.addLine(to: endPt)
         context.strokePath()
+
+        // Draw a circle at the end point if asked
+        if marker == true {
+            let markerSize = frame.width / gridSegments / 3
+            context.setFillColor(gray: 0.0, alpha: 1.0)
+            context.fillEllipse(in: CGRect(origin: CGPoint(x:endPt.x - markerSize/2, y: endPt.y - markerSize/2),
+                                           size: CGSize(width: markerSize, height: markerSize)))
+            context.strokePath()
+        }
     }
 
 
