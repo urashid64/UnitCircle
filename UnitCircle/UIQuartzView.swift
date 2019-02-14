@@ -190,6 +190,44 @@ class UIQuartzView: UIView {
 
     // Helper Functions
     
+    // Find closest axis + step for a given point in view coordinates
+    func closestAngle (to pt:CGPoint) -> (TrigData.axis, TrigData.step) {
+        // Center point in view coordinates
+        let center = CGPoint (x: frame.width/2.0, y: frame.height/2.0)
+        // Size of grid in view coordinates
+        let gridSize = frame.width / gridSegments
+        
+        // 5 grid segments = 1.0 unit
+        let radius = Float(gridSize * 5.0)
+
+        // Initial values
+        var closestDist = CGFloat.greatestFiniteMagnitude
+        var closestAxis = TrigData.axis.plus_x
+        var closestStep = TrigData.step.zero
+
+        let td = TrigData.instance
+        for (axis, (radAxis, _)) in td.axisAngle {
+            for (step, (radStep, _)) in td.stepAngle {
+                // Locate the point on circle for each angle
+                let ptOnCircle = CGPoint(x:center.x + radius * cos(radAxis + radStep), y: center.y - radius * sin(radAxis + radStep))
+                
+                // Calculate its distance from the tap point
+                let dist = (pt.x - ptOnCircle.x) * (pt.x - ptOnCircle.x) + (pt.y - ptOnCircle.y) * (pt.y - ptOnCircle.y)
+                
+                // Keep track of the shortest distance
+                if  dist < closestDist  {
+                    closestDist = dist
+                    closestAxis = axis
+                    closestStep = step
+                }
+            }
+        }
+        
+        // Return Axis and step corresponding to the closest angle
+        return (closestAxis, closestStep)
+    }
+
+
     // Draw a radial line of specified length and at a specified positive angle
     func drawLine (_ context:CGContext, center: CGPoint, radius length:Float, angle theta:Float, marker:Bool = false) {
     

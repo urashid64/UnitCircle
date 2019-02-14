@@ -33,13 +33,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Times New Roman font to display angles
         let timesNR = UIFont.init(name: "TimesNewRomanPSMT", size: 22.0)!
         valRadians.setFont(font: timesNR)
         valDegrees.setFont(font: timesNR)
 
+        // Red & Blue for X & Y coordinates
         valX.setTextColor(color: .red)
         valY.setTextColor(color: .blue)
+
+        // Tap Recognizer to select the closest angle
+        let tapRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(handleTap))
+        tapRecognizer.numberOfTapsRequired = 1
+        qView.addGestureRecognizer(tapRecognizer)
         
         // Start with fractions
         optFracDecimal.selectedSegmentIndex = 0
@@ -48,11 +55,12 @@ class ViewController: UIViewController {
 
 
     func updateTrigLabels () {
-        
         let tv = TrigData.instance.currentTrigValues()
+
         valRadians.setFraction(tv.angle.rad)
         valDegrees.setFraction(tv.angle.deg)
 
+        // Display fractions or decimals based on the option selected
         if (self.optFracDecimal.selectedSegmentIndex == 0) {
             valSin.setFraction(tv.sin.0)
             valCos.setFraction(tv.cos.0)
@@ -78,7 +86,7 @@ class ViewController: UIViewController {
             valY.setFraction(tv.sin.1)
         }
 
-        // Refresh to draw new highlighted angle
+        // Refresh to display new values
         qView.setNeedsDisplay()
     }
 
@@ -91,6 +99,15 @@ class ViewController: UIViewController {
     }
 
 
+    @objc func handleTap (recognizer: UITapGestureRecognizer) {
+        let tapped = recognizer.location(in: qView)
+        let (newAxis, newStep) = qView.closestAngle(to: tapped)
+        
+        TrigData.instance.setAngle(axis: newAxis, step: newStep)
+        updateTrigLabels()
+    }
+    
+    
     @IBAction func moveClockwise(_ sender: UIButton) {
         TrigData.instance.prevAngle()
         updateTrigLabels()

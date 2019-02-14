@@ -134,13 +134,18 @@ class TrigData {
             currentAxis = axis.allCases[prevAxisIndex]
         }
     }
-    
+
+    // Move to specific Angle
+    func setAngle (axis:axis, step:step) {
+        currentAxis = axis
+        currentStep = step
+    }
+
     // Text for trig values for the current axis + step
     func currentTrigValues () -> TrigValues {
         let axis = axisAngle[currentAxis]!.1
         let step = stepAngle[currentStep]!.1
-        let tv = trigValues[axis + step]!
-        return tv
+        return trigValues[axis + step]!
     }
 
     // Value of current axis + step in radians
