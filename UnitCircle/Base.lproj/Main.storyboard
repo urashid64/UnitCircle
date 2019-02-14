@@ -78,8 +78,8 @@
                                             <constraint firstAttribute="height" constant="50" id="Yyl-2t-e6V"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="yu2-7Z-Hr1"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SP2-W5-z9y" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
@@ -111,8 +111,8 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="BaJ-09-uiM"/>
                                             <constraint firstAttribute="height" constant="50" id="V2p-Jq-ON6"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kav-tU-hOR" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
@@ -144,8 +144,8 @@
                                             <constraint firstAttribute="height" constant="50" id="S5N-Oc-9Ja"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="lef-uD-Dai"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Quj-Ix-sG1" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
@@ -177,8 +177,8 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="r1v-Xc-TcG"/>
                                             <constraint firstAttribute="height" constant="50" id="wlW-Jj-i7E"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-8D-E1O" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
@@ -210,8 +210,8 @@
                                             <constraint firstAttribute="height" constant="50" id="6ea-Xj-SYj"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="aj6-fn-07o"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpM-Ph-1qB" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
@@ -243,8 +243,8 @@
                                             <constraint firstAttribute="height" constant="50" id="Gf6-iI-lTs"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="d2M-L9-vtP"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOD-31-Zv7" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
@@ -317,37 +317,47 @@
                                     <action selector="toggleFracDecimal:" destination="BYZ-38-t0r" eventType="valueChanged" id="IdG-im-0lC"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84c-Bn-uKC" userLabel="CW Button">
-                                <rect key="frame" x="16" y="395" width="32" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84c-Bn-uKC" userLabel="CW Button">
+                                <rect key="frame" x="16" y="395" width="50" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="6LQ-6W-HeF"/>
-                                    <constraint firstAttribute="width" constant="32" id="QJd-Bb-UUO"/>
+                                    <constraint firstAttribute="width" constant="50" id="QJd-Bb-UUO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="50"/>
-                                <state key="normal" title="↻">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="⤼">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="moveClockwise:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Zg-5c-Enn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syx-uk-XfC" userLabel="CCW Button">
-                                <rect key="frame" x="327" y="393" width="32" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syx-uk-XfC" userLabel="CCW Button">
+                                <rect key="frame" x="309" y="393" width="50" height="32"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="6mW-Gz-bSb"/>
+                                    <constraint firstAttribute="width" constant="50" id="6mW-Gz-bSb"/>
                                     <constraint firstAttribute="height" constant="32" id="BiK-iU-4Zc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="50"/>
-                                <state key="normal" title="↺">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="⤽">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="moveCounterCW:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yot-7B-oZe"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X,Y COORDINATES =" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uy-lt-wEF" userLabel="lblCoords">
+                                <rect key="frame" x="72.333333333333329" y="573.33333333333337" width="152.66666666666669" height="19.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="152.66999999999999" id="UzV-hf-trn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="zuM-Ec-BJ8" firstAttribute="leading" secondItem="2Uy-lt-wEF" secondAttribute="trailing" constant="8" id="19n-Vc-PCA"/>
                             <constraint firstItem="g08-Zr-Tru" firstAttribute="top" secondItem="abp-SX-4Ho" secondAttribute="bottom" constant="8" id="2cx-i8-lWR"/>
                             <constraint firstItem="K23-XQ-MS8" firstAttribute="top" secondItem="XoB-c5-du8" secondAttribute="bottom" constant="8" id="5Sd-tx-DgT"/>
                             <constraint firstItem="abp-SX-4Ho" firstAttribute="top" secondItem="XoB-c5-du8" secondAttribute="top" id="5je-Sf-6iH"/>
@@ -366,6 +376,7 @@
                             <constraint firstItem="uRc-NR-unG" firstAttribute="bottom" secondItem="84c-Bn-uKC" secondAttribute="bottom" id="dRs-aH-dfK"/>
                             <constraint firstItem="6uX-dI-9qX" firstAttribute="top" secondItem="jc9-ou-W4W" secondAttribute="bottom" constant="8" id="dzx-8B-Bnu"/>
                             <constraint firstItem="LvH-zi-SHf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="goV-vD-VtQ"/>
+                            <constraint firstItem="zuM-Ec-BJ8" firstAttribute="centerY" secondItem="2Uy-lt-wEF" secondAttribute="centerY" id="mwP-ex-SqG"/>
                             <constraint firstItem="uRc-NR-unG" firstAttribute="top" secondItem="LvH-zi-SHf" secondAttribute="bottom" constant="12" id="nKK-gn-oHg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6uX-dI-9qX" secondAttribute="trailing" constant="16" id="off-wk-LqX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jc9-ou-W4W" secondAttribute="trailing" constant="16" id="rte-ZK-O7s"/>
