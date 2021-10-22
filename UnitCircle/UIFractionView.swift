@@ -11,7 +11,7 @@ import UIKit
 class UIFractionView: UIView {
     private var numerator: UILabel = {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
-//        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+//        label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         label.textAlignment = .center
         label.backgroundColor = .clear
         return label
@@ -34,7 +34,7 @@ class UIFractionView: UIView {
     }()
 
     private var font: UIFont = {
-        let font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        let font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         return font
     }()
 

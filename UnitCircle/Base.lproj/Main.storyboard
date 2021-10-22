@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -60,7 +58,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LvH-zi-SHf" secondAttribute="height" multiplier="1:1" id="35l-Tx-jiH"/>
                                     <constraint firstItem="hHI-pq-qHs" firstAttribute="leading" secondItem="LvH-zi-SHf" secondAttribute="leading" id="Xb3-EX-OIM"/>
@@ -70,7 +68,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoB-c5-du8" userLabel="View Sin">
-                                <rect key="frame" x="16" y="439" width="100" height="50"/>
+                                <rect key="frame" x="16" y="442" width="100" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sin =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icf-50-Pso">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -84,14 +82,14 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SP2-W5-z9y" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
                                         <rect key="frame" x="50" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="XqW-So-gCi"/>
                                             <constraint firstAttribute="height" constant="50" id="rxb-NU-prG"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Icf-50-Pso" firstAttribute="leading" secondItem="XoB-c5-du8" secondAttribute="leading" id="0X2-ih-mF4"/>
                                     <constraint firstItem="SP2-W5-z9y" firstAttribute="top" secondItem="XoB-c5-du8" secondAttribute="top" id="PJK-FO-LbW"/>
@@ -103,7 +101,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abp-SX-4Ho" userLabel="View Cos">
-                                <rect key="frame" x="137.66666666666666" y="439" width="100" height="50"/>
+                                <rect key="frame" x="137.66666666666666" y="442" width="100" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cos =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqA-FF-iDV">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -117,14 +115,14 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kav-tU-hOR" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
                                         <rect key="frame" x="50" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="WSG-bG-MyK"/>
                                             <constraint firstAttribute="height" constant="50" id="Yse-Ik-4aL"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6gm-uk-5Q2"/>
                                     <constraint firstItem="kav-tU-hOR" firstAttribute="top" secondItem="abp-SX-4Ho" secondAttribute="top" id="EDt-Wl-4cD"/>
@@ -136,7 +134,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jc9-ou-W4W" userLabel="View Tan">
-                                <rect key="frame" x="259" y="439" width="100" height="50"/>
+                                <rect key="frame" x="259" y="442" width="100" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tan =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urz-XQ-eJl">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -150,14 +148,14 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Quj-Ix-sG1" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
                                         <rect key="frame" x="50" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="SJU-24-s4t"/>
                                             <constraint firstAttribute="width" constant="50" id="ga5-l3-ulx"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Quj-Ix-sG1" secondAttribute="trailing" id="2Hp-Uz-I0e"/>
                                     <constraint firstItem="urz-XQ-eJl" firstAttribute="leading" secondItem="jc9-ou-W4W" secondAttribute="leading" id="OB9-5p-KB1"/>
@@ -169,7 +167,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K23-XQ-MS8" userLabel="View Sec">
-                                <rect key="frame" x="16" y="497" width="100" height="50"/>
+                                <rect key="frame" x="16" y="500" width="100" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sec =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41O-nG-Czk">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -183,14 +181,14 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-8D-E1O" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
                                         <rect key="frame" x="50" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="WzU-Jj-ewO"/>
                                             <constraint firstAttribute="width" constant="50" id="lzg-5G-cp0"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="ovd-8D-E1O" firstAttribute="leading" secondItem="41O-nG-Czk" secondAttribute="trailing" id="4jD-2B-CJp"/>
                                     <constraint firstAttribute="height" constant="50" id="ESU-pw-ytf"/>
@@ -202,7 +200,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g08-Zr-Tru" userLabel="View Csc">
-                                <rect key="frame" x="137.66666666666666" y="497" width="100" height="50"/>
+                                <rect key="frame" x="137.66666666666666" y="500" width="100" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Csc =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufx-6l-SXF">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -216,14 +214,14 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpM-Ph-1qB" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
                                         <rect key="frame" x="50" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Fh7-0d-DWN"/>
                                             <constraint firstAttribute="width" constant="50" id="NRj-6A-oHN"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="ufx-6l-SXF" firstAttribute="leading" secondItem="g08-Zr-Tru" secondAttribute="leading" id="1WY-pK-JMb"/>
                                     <constraint firstAttribute="height" constant="50" id="Hcq-O6-lLI"/>
@@ -235,7 +233,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6uX-dI-9qX" userLabel="View Cot">
-                                <rect key="frame" x="259" y="497" width="100" height="50"/>
+                                <rect key="frame" x="259" y="500" width="100" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cot =" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWR-eC-a7y">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -249,14 +247,14 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOD-31-Zv7" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
                                         <rect key="frame" x="50" y="0.0" width="50" height="50"/>
-                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="9ce-tA-kGB"/>
                                             <constraint firstAttribute="width" constant="50" id="TSy-db-eBa"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="1NK-VX-t7l"/>
                                     <constraint firstItem="ZOD-31-Zv7" firstAttribute="leading" secondItem="QWR-eC-a7y" secondAttribute="trailing" id="1xh-Fr-LzL"/>
@@ -268,7 +266,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="zuM-Ec-BJ8" userLabel="Coord. Stack View">
-                                <rect key="frame" x="233" y="563" width="126" height="40"/>
+                                <rect key="frame" x="234" y="566" width="125" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiz-IY-pvx">
                                         <rect key="frame" x="0.0" y="0.0" width="9.6666666666666661" height="33.666666666666664"/>
@@ -285,13 +283,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLK-qE-rLj">
-                                        <rect key="frame" x="59.666666666666686" y="0.0" width="6.6666666666666714" height="28.666666666666668"/>
+                                        <rect key="frame" x="59.666666666666686" y="0.0" width="5.6666666666666714" height="28.666666666666668"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tVn-Uu-Rkv" customClass="UIFractionView" customModule="UnitCircle" customModuleProvider="target">
-                                        <rect key="frame" x="66.333333333333314" y="0.0" width="50" height="40"/>
+                                        <rect key="frame" x="65.333333333333314" y="0.0" width="50" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="lsF-TK-81z"/>
@@ -299,7 +297,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=")" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yA2-Wr-E4Y">
-                                        <rect key="frame" x="116.33333333333331" y="0.0" width="9.6666666666666714" height="33.666666666666664"/>
+                                        <rect key="frame" x="115.33333333333331" y="0.0" width="9.6666666666666714" height="33.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -307,7 +305,7 @@
                                 </subviews>
                             </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uRc-NR-unG">
-                                <rect key="frame" x="116" y="399" width="143" height="29"/>
+                                <rect key="frame" x="111" y="399" width="153" height="32"/>
                                 <segments>
                                     <segment title="Fractions"/>
                                     <segment title="Decimal"/>
@@ -317,44 +315,80 @@
                                     <action selector="toggleFracDecimal:" destination="BYZ-38-t0r" eventType="valueChanged" id="IdG-im-0lC"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84c-Bn-uKC" userLabel="CW Button">
-                                <rect key="frame" x="16" y="395" width="50" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84c-Bn-uKC" userLabel="CW Button">
+                                <rect key="frame" x="16" y="398" width="50" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="6LQ-6W-HeF"/>
                                     <constraint firstAttribute="width" constant="50" id="QJd-Bb-UUO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="50"/>
                                 <state key="normal" title="⤼">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" systemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="moveClockwise:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Zg-5c-Enn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syx-uk-XfC" userLabel="CCW Button">
-                                <rect key="frame" x="309" y="393" width="50" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syx-uk-XfC" userLabel="CCW Button">
+                                <rect key="frame" x="309" y="396" width="50" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="6mW-Gz-bSb"/>
                                     <constraint firstAttribute="height" constant="32" id="BiK-iU-4Zc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="50"/>
                                 <state key="normal" title="⤽">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" systemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="moveCounterCW:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yot-7B-oZe"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X,Y COORDINATES =" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uy-lt-wEF" userLabel="lblCoords">
-                                <rect key="frame" x="72.333333333333329" y="573.33333333333337" width="152.66666666666669" height="19.333333333333371"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Uy-lt-wEF" userLabel="lblCoords">
+                                <rect key="frame" x="53" y="573.33333333333337" width="173" height="25.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="152.66999999999999" id="UzV-hf-trn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="(">
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="x">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="22" name="SFMono-Regular"/>
+                                            <font key="NSOriginalFont" size="24" name="SFMono-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=", ">
+                                        <attributes>
+                                            <font key="NSFont" size="22" name="SFMono-Regular"/>
+                                            <font key="NSOriginalFont" size="24" name="SFMono-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="y">
+                                        <attributes>
+                                            <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="22" name="SFMono-Regular"/>
+                                            <font key="NSOriginalFont" size="24" name="SFMono-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=") COORDINATES =">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="16"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zuM-Ec-BJ8" firstAttribute="leading" secondItem="2Uy-lt-wEF" secondAttribute="trailing" constant="8" id="19n-Vc-PCA"/>
@@ -383,7 +417,6 @@
                             <constraint firstItem="zuM-Ec-BJ8" firstAttribute="top" secondItem="6uX-dI-9qX" secondAttribute="bottom" constant="16" id="wnz-h4-qjg"/>
                             <constraint firstItem="LvH-zi-SHf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yBc-Ka-IHA"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="optFracDecimal" destination="uRc-NR-unG" id="vTX-Jq-FPE"/>
@@ -402,7 +435,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
+            <point key="canvasLocation" x="52" y="-158"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
