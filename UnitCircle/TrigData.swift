@@ -115,22 +115,22 @@ class TrigData {
 
     // Move to next Angle
     func nextAngle () {
-        let nextStepIndex = (step.allCases.index(of: currentStep)! + 1) % step.allCases.count
+        let nextStepIndex = (step.allCases.firstIndex(of: currentStep)! + 1) % step.allCases.count
         currentStep = step.allCases[nextStepIndex]
 
         if nextStepIndex == 0 {
-            let nextAxisIndex = (axis.allCases.index(of: currentAxis)! + 1) % axis.allCases.count
+            let nextAxisIndex = (axis.allCases.firstIndex(of: currentAxis)! + 1) % axis.allCases.count
             currentAxis = axis.allCases[nextAxisIndex]
         }
     }
 
     // Move to previous Angle
     func prevAngle () {
-        let prevStepIndex = (step.allCases.index(of: currentStep)! + step.allCases.count - 1) % step.allCases.count
+        let prevStepIndex = (step.allCases.firstIndex(of: currentStep)! + step.allCases.count - 1) % step.allCases.count
         currentStep = step.allCases[prevStepIndex]
 
         if prevStepIndex == step.allCases.count - 1 {
-            let prevAxisIndex = (axis.allCases.index(of: currentAxis)! + axis.allCases.count - 1) % axis.allCases.count
+            let prevAxisIndex = (axis.allCases.firstIndex(of: currentAxis)! + axis.allCases.count - 1) % axis.allCases.count
             currentAxis = axis.allCases[prevAxisIndex]
         }
     }
