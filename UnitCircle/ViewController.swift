@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         // Times New Roman font to display angles
-        let timesNR = UIFont.init(name: "TimesNewRomanPSMT", size: 22.0)!
+        let timesNR = UIFont.init(name: "TimesNewRomanPS-BoldMT", size: 22.0)!
         valRadians.setFont(font: timesNR)
         valDegrees.setFont(font: timesNR)
 
